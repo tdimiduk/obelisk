@@ -57,6 +57,7 @@ Obelisk assumes basic knowledge of [Haskell](https://www.haskell.org/) and [Refl
         binary-caches = https://cache.nixos.org https://nixcache.reflex-frp.org
         binary-cache-public-keys = cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= ryantrinkle.com-1:JJiAKaRv9mWgpVAz8dwewnZe0AzzEAzPkagE9SP5NWI=
         binary-caches-parallel-connections = 40
+        experimental-features = nix-command
         ```
         * If you're on a Linux distribution other than NixOS, enable sandboxing (see these [issue 172](https://github.com/obsidiansystems/obelisk/issues/172#issuecomment-411507818) or [issue 6](https://github.com/obsidiansystems/obelisk/issues/6) if you run into build problems) by adding the following:
           ```nix
