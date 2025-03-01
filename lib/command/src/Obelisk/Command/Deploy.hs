@@ -178,7 +178,7 @@ deployPush deployPath builders = do
       checkGitCleanStatus srcPath True >>= \case
         True -> wrapNixThunkError $ packThunk (ThunkPackConfig False (ThunkConfig Nothing)) srcPath
         False -> failWith $ T.pack $ "ob deploy push: ensure " <> srcPath <> " has no pending changes and latest is pushed upstream."
-    Left err -> failWith $ "ob deploy push: couldn't read src thunk: " <> T.pack (show err)
+    Left err -> failWith $ "ob deploy push: couldn't read src thunk: " <> "TODO: show error" --T.pack (show err)
   let version = show . _thunkRev_commit $ _thunkPtr_rev thunkPtr
   let moduleFile = deployPath </> "module.nix"
   moduleFileExists <- liftIO $ doesFileExist moduleFile
